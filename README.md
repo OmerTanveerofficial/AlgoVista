@@ -2,6 +2,20 @@
 
 A modern, interactive web application for visualizing sorting, pathfinding, and graph algorithms. Built to help students and developers understand how fundamental computer science algorithms work through step-by-step animation.
 
+## Screenshots
+
+### Landing Page
+![Home](screenshots/home.png)
+
+### Sorting Visualizer
+![Sorting](screenshots/sorting.png)
+
+### Pathfinding Visualizer
+![Pathfinding](screenshots/pathfinding.png)
+
+### Graph Visualizer
+![Graph](screenshots/graph.png)
+
 ## Features
 
 ### Sorting Algorithms
