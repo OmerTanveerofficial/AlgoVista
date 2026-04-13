@@ -17,7 +17,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2 text-xl font-bold text-white no-underline">
-            <span className="text-2xl">⬡</span>
+            <svg className="w-7 h-7 text-primary-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z" />
+            </svg>
             <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">
               AlgoVista
             </span>

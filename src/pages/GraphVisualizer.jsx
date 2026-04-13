@@ -113,15 +113,18 @@ export default function GraphVisualizer() {
   const algoInfo = GRAPH_ALGORITHMS[algorithm]
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-6">
+    <div className="relative max-w-7xl mx-auto px-4 py-8">
+      <div className="glow-blob glow-blob-1" />
+      <div className="glow-blob glow-blob-2" />
+
       {/* Controls */}
-      <div className="bg-surface-light rounded-2xl border border-surface-lighter p-6 mb-6">
+      <div className="glass rounded-3xl p-8 mb-8">
         <div className="flex flex-wrap items-center gap-4">
           <select
             value={algorithm}
             onChange={(e) => setAlgorithm(e.target.value)}
             disabled={isRunning}
-            className="bg-surface-lighter text-white px-4 py-2 rounded-lg border border-surface-lighter focus:border-primary outline-none"
+            className="bg-white/5 text-white px-4 py-2 rounded-xl border border-white/10 focus:border-primary outline-none"
           >
             {Object.entries(GRAPH_ALGORITHMS).map(([key, algo]) => (
               <option key={key} value={key}>{algo.name}</option>
@@ -131,26 +134,26 @@ export default function GraphVisualizer() {
           <button
             onClick={runAlgorithm}
             disabled={isRunning}
-            className="px-6 py-2 bg-gradient-to-r from-primary to-primary-dark text-white rounded-lg font-medium hover:shadow-lg hover:shadow-primary/25 transition-all disabled:opacity-50"
+            className="btn-glow px-6 py-2 bg-gradient-to-r from-primary to-primary-dark text-white rounded-xl font-medium hover:shadow-lg hover:shadow-primary/25 transition-all disabled:opacity-50"
           >
             Visualize
           </button>
 
           <button
             onClick={regenerate}
-            className="px-6 py-2 border border-surface-lighter text-gray-300 rounded-lg font-medium hover:bg-surface-lighter/50 transition-all"
+            className="glass px-6 py-2 border border-white/10 text-gray-300 rounded-xl font-medium hover:bg-white/5 transition-all"
           >
             New Graph
           </button>
 
           {stepInfo && (
-            <div className="ml-auto px-4 py-2 bg-surface-lighter/50 rounded-lg text-sm text-gray-300 font-mono">
+            <div className="ml-auto px-4 py-2 glass rounded-xl text-sm text-gray-300 font-mono">
               {stepInfo}
             </div>
           )}
         </div>
 
-        <div className="mt-4 pt-4 border-t border-surface-lighter flex flex-wrap gap-6 text-sm">
+        <div className="mt-4 pt-4 border-t border-white/5 flex flex-wrap gap-8 text-sm">
           <div>
             <span className="text-gray-500">Algorithm:</span>{' '}
             <span className="text-white font-medium">{algoInfo.name}</span>
@@ -164,7 +167,7 @@ export default function GraphVisualizer() {
       </div>
 
       {/* Graph Visualization */}
-      <div className="bg-surface-light rounded-2xl border border-surface-lighter p-6">
+      <div className="glass rounded-3xl p-8">
         <svg viewBox="0 0 800 600" className="w-full h-[500px]">
           {/* Edges */}
           {edges.map((edge, i) => {
@@ -247,7 +250,7 @@ export default function GraphVisualizer() {
         </svg>
 
         {/* Legend */}
-        <div className="flex justify-center gap-6 mt-4 pt-4 border-t border-surface-lighter">
+        <div className="flex justify-center gap-8 mt-4 pt-4 border-t border-white/5">
           <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-primary" /><span className="text-xs text-gray-400">Visited</span></div>
           <div className="flex items-center gap-2"><div className="w-3 h-3 rounded bg-accent" /><span className="text-xs text-gray-400">MST/Active Edge</span></div>
           <div className="flex items-center gap-2"><div className="w-3 h-3 rounded bg-yellow-400" /><span className="text-xs text-gray-400">Considering</span></div>
