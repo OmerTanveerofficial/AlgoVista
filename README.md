@@ -7,16 +7,16 @@ A modern, interactive web application for visualizing sorting, pathfinding, and 
 ## Screenshots
 
 ### Landing Page
-![Home](screenshots/home.png)
+![Home](docs/01-home.png)
 
 ### Sorting Visualizer
-![Sorting](screenshots/sorting.png)
+![Sorting](docs/02-sorting.png)
 
 ### Pathfinding Visualizer
-![Pathfinding](screenshots/pathfinding.png)
+![Pathfinding](docs/03-pathfinding.png)
 
 ### Graph Visualizer
-![Graph](screenshots/graph.png)
+![Graph](docs/04-graph.png)
 
 ## Features
 
