@@ -168,7 +168,7 @@ export default function GraphVisualizer() {
 
       {/* Graph Visualization */}
       <div className="glass rounded-3xl p-8">
-        <svg viewBox="0 0 800 600" className="w-full h-[500px]">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" className="w-full max-w-3xl mx-auto block h-[520px]">
           {/* Edges */}
           {edges.map((edge, i) => {
             const from = getNodePosition(edge.from)

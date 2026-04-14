@@ -240,19 +240,21 @@ export default function PathfindingVisualizer() {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
-        <div className="inline-block">
-          {grid.map((row, r) => (
-            <div key={r} className="flex">
-              {row.map((cell, c) => (
-                <div
-                  key={`${r}-${c}`}
-                  className={`w-[18px] h-[18px] border border-surface/30 cursor-pointer transition-colors duration-100 ${getCellClass(r, c)}`}
-                  onMouseDown={() => handleMouseDown(r, c)}
-                  onMouseEnter={() => handleMouseEnter(r, c)}
-                />
-              ))}
-            </div>
-          ))}
+        <div className="flex justify-center">
+          <div className="inline-block">
+            {grid.map((row, r) => (
+              <div key={r} className="flex">
+                {row.map((cell, c) => (
+                  <div
+                    key={`${r}-${c}`}
+                    className={`w-[22px] h-[22px] border border-surface/30 cursor-pointer transition-colors duration-100 ${getCellClass(r, c)}`}
+                    onMouseDown={() => handleMouseDown(r, c)}
+                    onMouseEnter={() => handleMouseEnter(r, c)}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Legend */}
