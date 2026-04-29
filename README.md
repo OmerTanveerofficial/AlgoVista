@@ -1,4 +1,4 @@
-# AlgoVista - Interactive Algorithm Visualizer
+# AlgoVista — Interactive Algorithm Visualizer
 
 A modern, interactive web application for visualizing sorting, pathfinding, and graph algorithms. Built to help students and developers understand how fundamental computer science algorithms work through step-by-step animation.
 
